@@ -26,14 +26,14 @@ console.log(isSmallScreen, "hii");
         <div class="left" style="">
           <div class="left-top">
             <img
+            style="cursor: pointer;"
               src="img/chat.svg"
               v-motion
-              :initial="{ opacity: 0, y: 100 }"
-              :enter="{ opacity: 1, y: 0, scale: 1 }"
-              :variants="{ custom: { scale: 2 } }"
-              :hovered="{ scale: 1.2 }"
+              :initial="{ opacity: 0, scale: 0}"
+              :enter="{ opacity: 1, scale: 1 }"
+              :hovered="{ scale: 1.1 }"
               :delay="300"
-              :duration="1200"
+              :duration="500"
               alt="chat"
             />
 
@@ -56,7 +56,6 @@ console.log(isSmallScreen, "hii");
               :initial="{ opacity: 0, y: 100 }"
               :enter="{ opacity: 1, y: 0, scale: 1 }"
               :duration="500"
-              :delay="100"
             >
               법률 및 인사관리 부담없이 1주일 이내에 원격으로 채용해보세요
             </p>
@@ -141,6 +140,31 @@ console.log(isSmallScreen, "hii");
 
         <CarouselComponent />
       </div>
+
+      <div class="hero-mobile-only q-pb-xl lt-sm">
+        <div class="row">
+          <div class="row col-6">
+            <div><img src="icons/tick.svg" alt="tick"></div>
+            <div class="text-white q-ml-md">한국어 능력</div>
+          </div>
+          <div class="row col-6">
+            <div><img src="icons/tick.svg" alt="tick"></div>
+            <div class="text-white q-ml-md">한국어 능력</div>
+          </div>
+          <div class="row col-6">
+            <div><img src="icons/tick.svg" alt="tick"></div>
+            <div class="text-white q-ml-md">한국어 능력</div>
+          </div>
+          <div class="row col-6">
+            <div><img src="icons/tick.svg" alt="tick"></div>
+            <div class="text-white q-ml-md">한국어 능력</div>
+          </div>
+        </div>
+
+        <div class="q-pt-md text-weight-bold">
+          <a href="#" style="color: rgba(251, 255, 35, 1);">개발자가 필요하신가요?</a>
+        </div>
+      </div>
     </div>
 
     <BottomComponent />
@@ -205,11 +229,15 @@ console.log(isSmallScreen, "hii");
   position: absolute;
   left: 50%;
   transform: translate(-50%, -60%);
+  transition: all .5s ease;
   @media (max-width: 1024px) {
     left: 50%;
     top: 0%;
     transform: translate(-50%, -60%);
   }
+}
+.right img {
+  scale: 1.1
 }
 .right {
   margin-top: 2rem;

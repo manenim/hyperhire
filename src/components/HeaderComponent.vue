@@ -10,19 +10,12 @@
   
     <header
      
-    style="
-      background-color: transparent;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      padding-left: 7%;
-      padding-right: 7%;
-      padding-top: 0.5rem;
-    "
+    
+    class="site-header"
   >
     <q-toolbar>
       <q-toolbar-title>
-        <q-img src="img/logo.svg" style="width: 120px"></q-img>
+        <q-img src="img/logo.svg" style="width: 140px"></q-img>
       </q-toolbar-title>
 
       <q-toolbar-title class="gt-sm">
@@ -64,6 +57,7 @@
           aria-label="Menu"
           @click="toggleLeftDrawer"
           class="lt-md"
+          color="white"
         />
       </div>
     </q-toolbar>
@@ -156,7 +150,22 @@ function toggleLeftDrawer() {
 
 <style>
 
+.site-header{
+  background-color: transparent;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      padding-left: 7%;
+      padding-right: 7%;
+      padding-top: 0.5rem;
 
+      @media (max-width: 1024px) {
+    padding-left: 0%;
+  }
+  @media (max-width: 600px) {
+   padding-left: 0%;
+  }
+}
 .dropdown {
   display: inline-block;
 }

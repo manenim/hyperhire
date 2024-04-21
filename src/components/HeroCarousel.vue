@@ -1,6 +1,7 @@
-<script setup>
-import CarouselContent from './CarouselContent.vue';
+<script  setup>
+import { defineComponent } from 'vue'
 
+import CarouselContent from './CarouselContent.vue';
 
 
 
@@ -18,11 +19,11 @@ import CarouselContent from './CarouselContent.vue';
                :autoplay="true"
                :autoplay-timout="5000"
                 >
-  <Slide class="bg-white shadow-1 slide-1" :index="0"> 
+  <Slide class="bg-white slide-1" :index="0"> 
     <CarouselContent />    
 </Slide>
-  <Slide class="bg-white shadow-1 slide-2" :index="1"> <CarouselContent />  </Slide>
-  <Slide class="bg-white shadow-1 slide-3" :index="2"> <CarouselContent />  </Slide>
+  <Slide class="bg-white slide-2" :index="1"> <CarouselContent />  </Slide>
+  <Slide class="bg-white slide-3" :index="2"> <CarouselContent />  </Slide>
 </Carousel3d>
 
 </template>
@@ -30,13 +31,15 @@ import CarouselContent from './CarouselContent.vue';
 <style scoped>
 .slide-1{
     border-radius: 8px;
-    
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 .slide-2{
     border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 .slide-3{
     border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 </style>

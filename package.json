@@ -10,8 +10,8 @@
     "format": "prettier --write \"**/*.{js,vue,html,md,json}\" --ignore-path .gitignore",
     "test": "echo \"No test specified\" && exit 0",
     "dev": "quasar dev",
-     "build": "quasar build",
-      "deploy": "vercel"
+    "build": "quasar build",
+    "deploy": "vercel"
   },
   "dependencies": {
     "@nanoandrew4/vue3-carousel-3d": "^1.0.0",
@@ -19,6 +19,7 @@
     "@vueuse/motion": "^2.1.0",
     "quasar": "^2.8.0",
     "vue": "^3.4.18",
+    "vue-carousel-3d": "^1.0.1",
     "vue-router": "^4.0.12",
     "vue3-carousel": "^0.3.3"
   },
