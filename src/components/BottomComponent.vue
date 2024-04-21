@@ -27,9 +27,9 @@
             </div>
           </div>
           <div class="cad">
-            <img src="img/code.svg" alt="card-icon" />
+            <img src="img/user.svg" alt="card-icon" />
             <div class="text-weight-bolder" style="font-size: 1rem">
-              해외 개발자 원격 채용
+              외국인 원격 채용 비개발
             </div>
             <div class="row q-mt-sm">
               바로가기
@@ -37,9 +37,9 @@
             </div>
           </div>
           <div class="cad">
-            <img src="img/code.svg" alt="card-icon" />
+            <img src="img/korr.svg" alt="card-icon" />
             <div class="text-weight-bolder" style="font-size: 1rem">
-              해외 개발자 원격 채용
+              해외 개발자 활용 서비스
             </div>
             <div class="row q-mt-sm">
               바로가기
@@ -47,7 +47,7 @@
             </div>
           </div>
           <div class="cad">
-            <img src="img/code.svg" alt="card-icon" />
+            <img src="img/settings.svg" alt="card-icon" />
             <div class="text-weight-bolder" style="font-size: 1rem">
               해외 개발자 원격 채용
             </div>
@@ -60,35 +60,36 @@
       </div>
     </div>
     <div class="row">
-      <div class="q-mt-xl bt-grid" style="">
-        <div>
+      <div class="q-mt-xl bt-grid row" style="">
+        <div class="col-6">
           <div class="b-text-head text-weight-bolder">상호명</div>
           <div>하이퍼하이어</div>
           <div class="text-weight-bold" style="width: 80%">
             Hyperhire India Private Limited
           </div>
         </div>
-        <div>
-          <div class="b-text-head text-weight-bolder">상호명</div>
+        <div class="col-6">
+          <div class="b-text-head text-weight-bolder">사업자등록번호 CEO</div>
           <div>하이퍼하이어</div>
           <div class="text-weight-bold" style="width: 80%">
             Hyperhire India Private Limited
           </div>
         </div>
       </div>
-      <div class="bt-grid q-mt-xl">
-        <div>
-          <div class="b-text-head text-weight-bolder">상호명</div>
+      <div class="bt-grid row q-mt-xl">
+        <div class="col-6">
+          <div class="b-text-head text-weight-bolder">대표 CIN</div>
           <div>하이퍼하이어</div>
           <div class="text-weight-bold" style="width: 80%">
             Hyperhire India Private Limited
           </div>
         </div>
-        <div>
-          <div class="b-text-head text-weight-bolder">상호명</div>
+        <div class="col-6">
+          <div class="b-text-head text-weight-bolder">주소 ADDRESS</div>
           <div>하이퍼하이어</div>
           <div class="text-weight-bold" style="width: 80%">
-            Hyperhire India Private Limited
+            D-138, Street number 11, Jagjeet Nagar, North East Delhi, New Delhi,
+            110053 India
           </div>
         </div>
       </div>
@@ -119,12 +120,20 @@
     width: 100%;
   }
 }
+.right {
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+}
 
 .bt-grid {
   width: 38%;
-  display: flex;
+
   @media (max-width: 1024px) {
-    width: 100%;
+    width: 92%;
   }
   @media (max-width: 600px) {
     width: 100%;

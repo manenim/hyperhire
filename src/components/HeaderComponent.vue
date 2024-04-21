@@ -1,18 +1,7 @@
-
-
-
-
-
 <template>
   <!-- <q-layout view="lHh Lpr lFf"> -->
-  
-  
-  
-    <header
-     
-    
-    class="site-header"
-  >
+
+  <header class="site-header">
     <q-toolbar>
       <q-toolbar-title>
         <q-img src="img/logo.svg" style="width: 140px"></q-img>
@@ -25,9 +14,8 @@
             class="q-mr-md text-white"
             style="font-size: 1rem; font-weight: bold"
             >채용
-            <span class="q-ml-sm"><img src="icons/arrow-down.svg"/></span>
-            </a
-          >
+            <span class="q-ml-sm"><img src="icons/arrow-down.svg" /></span>
+          </a>
 
           <div class="dropdown-content shadow-2">
             <a href="#" class="text-weight-bold">채용</a>
@@ -84,7 +72,7 @@
 <script setup>
 import EssentialLink from "components/EssentialLink.vue";
 
-import { ref, onMounted, onBeforeUnmount } from 'vue';
+import { ref, onMounted, onBeforeUnmount } from "vue";
 
 defineOptions({
   name: "MainLayout",
@@ -92,46 +80,21 @@ defineOptions({
 
 const linksList = [
   {
-    title: "Docs",
-    caption: "quasar.dev",
+    title: "채용",
+
     icon: "school",
-    link: "https://quasar.dev",
   },
   {
-    title: "Github",
-    caption: "github.com/quasarframework",
+    title: "해외 개발자 원격 채용",
     icon: "code",
-    link: "https://github.com/quasarframework",
   },
   {
-    title: "Discord Chat Channel",
-    caption: "chat.quasar.dev",
+    title: "외국인 원격 채용 (비개발 직군)",
     icon: "chat",
-    link: "https://chat.quasar.dev",
   },
   {
-    title: "Forum",
-    caption: "forum.quasar.dev",
+    title: "한국어 가능 외국인 채용",
     icon: "record_voice_over",
-    link: "https://forum.quasar.dev",
-  },
-  {
-    title: "Twitter",
-    caption: "@quasarframework",
-    icon: "rss_feed",
-    link: "https://twitter.quasar.dev",
-  },
-  {
-    title: "Facebook",
-    caption: "@QuasarFramework",
-    icon: "public",
-    link: "https://facebook.quasar.dev",
-  },
-  {
-    title: "Quasar Awesome",
-    caption: "Community Quasar projects",
-    icon: "favorite",
-    link: "https://awesome.quasar.dev",
   },
 ];
 
@@ -140,30 +103,23 @@ const leftDrawerOpen = ref(false);
 function toggleLeftDrawer() {
   leftDrawerOpen.value = !leftDrawerOpen.value;
 }
-
-
-
-
-
-
 </script>
 
 <style>
-
-.site-header{
+.site-header {
   background-color: transparent;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      padding-left: 7%;
-      padding-right: 7%;
-      padding-top: 0.5rem;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-top: 0.5rem;
 
-      @media (max-width: 1024px) {
-    padding-left: 0%;
+  @media (max-width: 1024px) {
+    padding-left: 2rem;
   }
   @media (max-width: 600px) {
-   padding-left: 0%;
+    padding-left: 0%;
   }
 }
 .dropdown {
@@ -173,7 +129,7 @@ function toggleLeftDrawer() {
 .dropdown-content {
   display: none;
   position: absolute;
-margin-left: -12rem;
+  margin-left: -12rem;
   background-color: #f1f1f1;
   min-width: 160px;
 
@@ -188,11 +144,11 @@ margin-left: -12rem;
   text-decoration: none;
   display: block;
   font-size: 1rem;
-  transition: .5s all ease;
+  transition: 0.5s all ease;
 }
 
 .dropdown-content a:hover {
-    background: rgb(223, 221, 221);
+  background: rgb(235, 229, 229);
 }
 
 .dropdown:hover .dropdown-content {

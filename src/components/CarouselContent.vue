@@ -1,13 +1,16 @@
 <script setup>
+import {ref} from 'vue'
+const props = defineProps(['name', 'img', 'years'])
+
 </script>
 
 <template>
     <div>
         <div class="slideContainer">
-            <img src="https://randomuser.me/api/portraits/men/89.jpg" alt="avatar" />
+            <img :src="props.img" alt="avatar" />
 
-            <div class="text-weight-bold text-h5">Sandi Guptah</div>
-            <div class="text-weight-bold text-subtitle1 text-secondary">마케팅 · 2y+</div>
+            <div class="text-weight-bold text-h5">{{props.name}}</div>
+            <div class="text-weight-bold text-subtitle1 text-secondary">마케팅 · {{props.years}}y+</div>
 
             <div class="q-mt-lg">
                 <div class="carousel-subtext">마케팅 콘텐츠 제작</div>
@@ -32,6 +35,7 @@
     flex-direction: column;
     align-items: center;
     padding-top: 1.8rem;
+    cursor: pointer;
 
     img{
         border-radius: 90px;

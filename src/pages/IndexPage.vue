@@ -14,12 +14,13 @@ import BottomComponent from "src/components/BottomComponent.vue";
 
 const smallScreen = useMediaQuery("(max-width: 1024px)"); // Adjust query as needed
 const isSmallScreen = smallScreen.value;
-console.log(isSmallScreen, "hii");
 </script>
 
 <template>
   <q-page class="">
-    <div class="banner-wrapper" style="padding-top: 2.5%">
+    <div class="banner-wrapper" >
+      <div class="blend"></div>
+      <div class="blend2"></div>
       <HeaderComponent />
 
       <div class="banner">
@@ -59,10 +60,16 @@ console.log(isSmallScreen, "hii");
             >
               법률 및 인사관리 부담없이 1주일 이내에 원격으로 채용해보세요
             </p>
-
-            <a href="#" class="banner-text text-white" style="font-size: 1rem"
-              >개발자가 필요하신가요?</a
+            <p
+             class="banner-text text-white" style="font-size: 1rem; text-decoration: underline; cursor: pointer;"
+              v-motion
+              :initial="{ opacity: 1 }"
+              :enter="{ opacity: 1}"
+              :duration="500"
             >
+개발자가 필요하신가요?            </p>
+
+            
           </div>
 
           <div
@@ -165,6 +172,7 @@ console.log(isSmallScreen, "hii");
           <a href="#" style="color: rgba(251, 255, 35, 1);">개발자가 필요하신가요?</a>
         </div>
       </div>
+      
     </div>
 
     <BottomComponent />
@@ -173,37 +181,58 @@ console.log(isSmallScreen, "hii");
 
 <style scoped>
 .banner-wrapper {
+  position: relative;
   background: url("/img/bg.png");
-  background-image: linear-gradient(
-    to bottom right,
-    rgba(38, 194, 185, 0.6),
-    rgba(40, 139, 231, 0.6)
-  );
+  
   background-size: cover;
   background-position: center;
   padding-bottom: 4rem;
   @media (max-width: 1024px) {
-    padding: 0px 32px 0 32px;
+  }
+
+  .blend{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+     background: linear-gradient(
+    to bottom right,
+    rgba(38, 194, 185, 1),
+    rgba(40, 139, 231, 1)
+  );
+  opacity: 80;
+  mix-blend-mode: color-burn;
+
+  }
+  .blend2{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+     background: linear-gradient(
+    to bottom right,
+    rgba(38, 194, 185, 1),
+    rgba(40, 139, 231, 1)
+  );
+  opacity: .6;
+  
+
   }
 }
 .banner {
   display: flex;
   align-items: center;
   width: 100%;
-  padding-top: 3%;
+  padding-top: 5%;
   padding-left: 8%;
   @media (max-width: 1024px) {
     padding-top: 4rem;
+    padding-left: 2rem;
   }
 
   @media (max-width: 1024px) {
-    /* Medium breakpoint */
     flex-direction: column;
-    padding-left: 0%;
   }
 
   @media (max-width: 600px) {
-    /* Small breakpoint */
     flex-direction: column;
   }
 }
@@ -228,20 +257,24 @@ console.log(isSmallScreen, "hii");
 .right img {
   position: absolute;
   left: 50%;
+  cursor: pointer;
+  scale: .9;
   transform: translate(-50%, -60%);
   transition: all .5s ease;
   @media (max-width: 1024px) {
     left: 50%;
     top: 0%;
     transform: translate(-50%, -60%);
+
   }
 }
-.right img {
+.right img:hover {
   scale: 1.1
+   
 }
 .right {
   margin-top: 2rem;
-  width: 48%;
+  width: 46%;
   position: relative;
 
   @media (max-width: 1024px) {
